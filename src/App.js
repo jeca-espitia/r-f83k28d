@@ -2,14 +2,28 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+      value: 0
+    }
+  }
+
   render() {
     return (
       <div>
-        <span className="value">0</span>
-        <button id="inc">Incrementa</button>
-      </div>
-    );
+        <span className="value">{this.state.value}</span>
+        <button onClick={this.changeValue.bind(this)}>Incrementa</button>
+      </div>)
+  }
+
+  changeValue() {
+    //const newValue = + this.state.value;
+    this.setState({
+      value: this.state.value+1
+    })
   }
 }
-
 export default App;
