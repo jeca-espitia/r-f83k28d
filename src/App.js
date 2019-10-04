@@ -15,7 +15,8 @@ class App extends Component {
     return (
       <div>
         <span className="value">{this.state.value}</span>
-        <button onClick={this.changeValue.bind(this)}>Incrementa</button>
+        <button id="inc" onClick={this.changeValue.bind(this)}>Incrementa</button>
+        
       </div>)
   }
 
